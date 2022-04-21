@@ -1,0 +1,13 @@
+﻿@{
+    ViewData["Title"] = "Random Quote";
+}
+
+@model Final.Models.Quote
+
+<div class="text-center">
+    <h1 class="display-4">Random Quote</h1>
+    <br /><br />
+
+    <h2>"<i>@Model.QuoteText</i>"</h2><br />
+    <h4><b> - @Model.Author</b></h4>
+</div>

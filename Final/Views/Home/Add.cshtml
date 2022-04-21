@@ -1,0 +1,31 @@
+﻿@{
+    ViewData["Title"] = "Add/Edit Quote";
+}
+
+@model Final.Models.Quote
+
+<div class="text-center">
+    <h1 class="display-4">Add/Edit Quote</h1>
+    <p>Add/Edit a quote by filling in the fields below</p>
+</div>
+
+<div>
+    <form method="post">
+        <label asp-for="QuoteText">Quote:</label>
+        <input type="text" asp-for="QuoteText" /><br />
+        <label asp-for="Author">Author:</label>
+        <input type="text" asp-for="Author" /><br />
+        <label asp-for="Date">Date:</label>
+        <input type="date" asp-for="Date" /><br />
+        <label asp-for="Subject">Subject:</label>
+        <input type="text" asp-for="Subject" /><br />
+        <label asp-for="Citation">Citation:</label>
+        <input type="text" asp-for="Citation" /><br />
+        <div asp-validation-summary="All" style="color:red;"></div>
+        @if (Model != null)
+        {
+        <input type="hidden" asp-for="QuoteId" />
+        }
+        <button class="btn btn-primary" type="submit">Submit Quote</button>
+    </form>
+</div>
